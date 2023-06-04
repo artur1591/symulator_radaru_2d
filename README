@@ -1,0 +1,27 @@
+
+program: symulator radaru 2d
+  autor: Artur Jeziorski
+
+napisany w C++/Qt, skompilowany pod Raspbianem (optymalizacja wyłączona i -g dla valgrinda dodane) na początku 2020.
+Niezgadzam się z twierdzeniem githuba że 2/3 kodu powstało o c++ a reszta w c.
+
+opis:
+		Program po uruchomieniu rysuje w oknie ramkę w której pojawiają się losowo 3 typy obiektów (żółta rakieta, niebieski samolot i zielony ptak) z losowymi prędkościami,w losowej  chwili i miejscu.  
+	Obiekt leci prosto aż do krawędzi ramki chyba że wystąpi kolizja. 
+	Kolizja obiektów tego samego typu powoduje zmianę koloru na czerwony w momencie przelatywania obiektów przez siebie.
+
+	Jeśli kolizja obiektów różnego typu:
+	obiekty posiadają składnik siła (rakieta=3,samolot=2,ptak=1)
+	obiekt o sile wiekszej leci dalej a ten o mniejszej wybucha.
+
+
+opcje i skróty klawiszowe:
+	+można uruchomić z argumentem/liczbą określającą ilość startów w danym cyklu.
+	aktualnie wartość 30 i większa powoduje starty nowych obiektów co sekundę.
+	mniejsza to ilość startów w  ciągu 30 sekund (ewentualnie mniej bo usuwa duplikaty)
+
+	+f5 pauza, f6 wznowienie
+	+Escape wyjście za potwierdzeniem
+
+program sprawdzony valgrindem(valkirią). 
+program zwalnia pamięć ale okazało się że Qt przecieka (stały wyciek z okna Qt).

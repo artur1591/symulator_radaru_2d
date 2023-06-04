@@ -1,0 +1,5 @@
+
+#valgrind ./symulator &
+valkyrie ./symulator &
+
+
